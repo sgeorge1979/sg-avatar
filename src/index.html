@@ -3,12 +3,72 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
+    <title>sg-Avatar Component</title>
 
     <script type="module" src="/build/sg-avatar.esm.js"></script>
     <script nomodule src="/build/sg-avatar.js"></script>
+
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #828181;
+        text-align: left;
+        padding: 8px;
+      }
+   
+
+      </style>
   </head>
   <body>
-    <my-component first="Stencil" middle="'Don't call me a framework'" last="JS"></my-component>
+
+    <table>
+      <tr>
+        <th>#</th>
+        <th>Syntax</th>
+        <th>Output</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td> &#60;sg-avatar name="John Smith"></sg-avatar></td>
+        <td><sg-avatar name="John Smith"></sg-avatar></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>&#60;sg-avatar name="John Smith" rounded></sg-avatar></td>
+        <td><sg-avatar name="John Smith" rounded></sg-avatar></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>&#60;sg-avatar name="John Smith" color="ff00ff"></sg-avatar></td>
+        <td> <sg-avatar name="John Smith" color="ff00ff"></sg-avatar></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>&#60;sg-avatar name="John Smith" background="b6e3f4" rounded></sg-avatar></td>
+        <td> <sg-avatar name="John Smith" background="b6e3f4" rounded></sg-avatar></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>&#60;sg-avatar avatar="face" size="70px" rounded  datasrc="your image path"></sg-avatar></td>
+        <td><sg-avatar avatar="face" size="70px"  rounded  datasrc="https://www.npmjs.com/npm-avatar/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXJVUkwiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci82YmM5YjI4NmI0YmNhYTEzNjI3ZDkxYjZkZjIxMzgyYj9zaXplPTEwMCZkZWZhdWx0PXJldHJvIn0._I1FNK9E6tYFSBKsRUazah-hZxTVTkECvsiJ1mrneLQ"></sg-avatar></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>&#60;sg-avatar avatar="face" sex="male" rounded background="#b6e3f4"></sg-avatar></td>
+        <td><sg-avatar  avatar="face" sex="male" rounded background="#b6e3f4"></sg-avatar></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>&#60;sg-avatar avatar="face" sex="male" rounded background="#b6e3f4"></sg-avatar></td>
+        <td><sg-avatar  avatar="face" sex="female" rounded background="#b6e3f4"></sg-avatar></td>
+      </tr>
+
+    </table>
+       
   </body>
 </html>

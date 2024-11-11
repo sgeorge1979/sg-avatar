@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+.sg-avatar-rounded {
+  margin: 0 3px 0 0;
+  border-radius: 50%;
+ }
+
+ .sg-avatar {
+  margin: 0 3px 0 0;
+  border-radius: 0%;
+ }

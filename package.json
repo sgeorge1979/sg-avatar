@@ -1,7 +1,7 @@
 {
   "name": "sg-avatar",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "sg-avatar-component",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",

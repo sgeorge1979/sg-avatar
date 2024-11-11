@@ -6,56 +6,56 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface SgAvatar {
+        "avatar": string;
+        "background": string;
+        "color": string;
+        "datasrc": string;
+        "femaleImage": string;
+        "fontSize": number;
+        "length": number;
+        "maleImage": string;
+        "name": string;
+        "rounded": boolean;
+        "sex": string;
+        "size": number;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLSgAvatarElement extends Components.SgAvatar, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLSgAvatarElement: {
+        prototype: HTMLSgAvatarElement;
+        new (): HTMLSgAvatarElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "sg-avatar": HTMLSgAvatarElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface SgAvatar {
+        "avatar"?: string;
+        "background"?: string;
+        "color"?: string;
+        "datasrc"?: string;
+        "femaleImage"?: string;
+        "fontSize"?: number;
+        "length"?: number;
+        "maleImage"?: string;
+        "name"?: string;
+        "rounded"?: boolean;
+        "sex"?: string;
+        "size"?: number;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "sg-avatar": SgAvatar;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "sg-avatar": LocalJSX.SgAvatar & JSXBase.HTMLAttributes<HTMLSgAvatarElement>;
         }
     }
 }
