@@ -112,6 +112,33 @@ And somewhere near the bottom we'll call this function.
 ```
 defineCustomElements();
 ```
+
+Install the following package to Copying assets from a component node module
+
+```
+npm install --save-dev copy-webpack-plugin
+```
+
+Now, Update your webpack configuration (webpack.config.js):
+
+```
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+module.exports = {
+  // ... other webpack config
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        { 
+          from: node_modules/sg-avatar/dist/components/assets/', 
+          to: 'assets' 
+        }
+      ]
+    })
+  ]
+};
+```
+
 Next, in `app.js` you utilize your new custom element
 ```
 function App() {
@@ -135,6 +162,34 @@ And somewhere near the bottom we'll call this function.
 ```
 defineCustomElements();
 ```
+
+Now, to copy the images from the component `node_module` into your application use
+the following command
+
+```
+npm i vite-plugin-static-copy
+```
+
+Add viteStaticCopy plugin to `vite.config.js / vite.config.ts` and add the
+component assets location as shown below.
+
+```
+import { viteStaticCopy } from 'vite-plugin-static-copy'
+
+export default {
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'node_modules/sg-avatar/dist/components/assets/*',
+          dest: 'assets'
+        }
+      ]
+    })
+  ]
+}
+```
+
 Next, in `App.Vue` you consume the custom element. 
 ```
 <template>
