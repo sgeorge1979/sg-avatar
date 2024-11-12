@@ -58,6 +58,14 @@ And somewhere near the bottom we'll call this function.
 defineCustomElements();
 ```
 
+ Configure the angular.json file. You’ll add this configuration under the projects > yourProjectName > architect > build > options > assets section:
+
+ ```
+"input": "node_modules/sg-avatar/dist/components/assets/",
+"output": "/assets/"
+```
+This will copy the images from the component into your application assets folder.
+
 Next, in `app.module.ts` add the CUSTOM_ELEMENTS_SCHEMA.
 
 ```
